@@ -860,16 +860,16 @@ static void computeFaceNormals(PackedVertex * inOutVertexes, const std::uint32_t
         errorF("Expected triangles! 'smooth_normals' option might not work...");
     }
 
-	// For every triangle...
-	for (std::size_t i = 0; i < indexCount; i += 3)
-	{
-		const std::uint32_t idx0 = indexes[i + 0];
-		const std::uint32_t idx1 = indexes[i + 1];
-		const std::uint32_t idx2 = indexes[i + 2];
+    // For every triangle...
+    for (std::size_t i = 0; i < indexCount; i += 3)
+    {
+        const std::uint32_t idx0 = indexes[i + 0];
+        const std::uint32_t idx1 = indexes[i + 1];
+        const std::uint32_t idx2 = indexes[i + 2];
 
-		const Vec3 v0 = inOutVertexes[idx0].position;
-		const Vec3 v1 = inOutVertexes[idx1].position;
-		const Vec3 v2 = inOutVertexes[idx2].position;
+        const Vec3 v0 = inOutVertexes[idx0].position;
+        const Vec3 v1 = inOutVertexes[idx1].position;
+        const Vec3 v2 = inOutVertexes[idx2].position;
 
         Vec3 a;
         a.x = v1.x - v0.x;
@@ -892,10 +892,10 @@ static void computeFaceNormals(PackedVertex * inOutVertexes, const std::uint32_t
         normal.y *= len;
         normal.z *= len;
 
-		inOutVertexes[idx0].normal = normal;
-		inOutVertexes[idx1].normal = normal;
-		inOutVertexes[idx2].normal = normal;
-	}
+        inOutVertexes[idx0].normal = normal;
+        inOutVertexes[idx1].normal = normal;
+        inOutVertexes[idx2].normal = normal;
+    }
 }
 
 static void computeSmoothNormals(PackedVertex * inOutVertexes, const std::size_t vertCount,
