@@ -18,7 +18,7 @@ Options:
   -f, --vb_friendly     Make the output 'Vertex Buffer friendly'. That is, single index per-vertex.
       --ib_type=type    Index buffer data type for when using 'vb_friendly'.
                         Possible values are 16, 16std, 32 and 32std.
-                        The 'std' suffix causes the use of the standard C data types found in <stdint.h>
+                        The 'std' suffix causes the use of the standard C data types found in cstdint/stdint.h
       --no_uvs          Don't output mesh UVs, even if they are present in the OBJ file.
 </pre>
 
